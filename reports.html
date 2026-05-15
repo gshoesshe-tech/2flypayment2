@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Reports | 2FLY Payment Hub</title><link rel="stylesheet" href="styles.css"></head>
+<body data-page="reports">
+<nav class="nav"><div class="container nav-inner"><a class="logo" href="admin.html"><div class="mark">2F</div><div><div class="brand">2FLY Payment Hub</div><div class="sub" id="userLabel">Loading...</div></div></a><div class="nav-links"><a class="nav-link" href="submit-payment.html">Submit</a><a class="nav-link" href="admin.html">Verify</a><a class="nav-link" href="reports.html">Reports</a><a class="nav-link" href="setup.html">Setup</a><button class="btn secondary small" onclick="logout()">Logout</button></div></div></nav>
+<main class="page"><div class="container"><section class="card"><h1>Daily collection report.</h1><p>Only verified payments count in the totals.</p><div class="toolbar"><input id="reportDate" type="date"><select id="typeFilter"><option value="all">All Types</option><option value="online">Online</option><option value="walkin">Walk-in</option></select><select id="paymentMethodFilter"></select></div>
+<div class="grid four"><div class="metric"><div class="metric-label">Total Verified</div><div class="metric-value" id="metricTotal">₱0</div></div><div class="metric"><div class="metric-label">Online</div><div class="metric-value" id="metricOnline">₱0</div></div><div class="metric"><div class="metric-label">Walk-in</div><div class="metric-value" id="metricWalkin">₱0</div></div><div class="metric"><div class="metric-label">Verified Count</div><div class="metric-value" id="metricVerified">0</div></div></div>
+<div class="grid four" style="margin-top:15px"><div class="metric"><div class="metric-label">GCash 1</div><div class="metric-value" id="metricGcash1">₱0</div></div><div class="metric"><div class="metric-label">GCash 2</div><div class="metric-value" id="metricGcash2">₱0</div></div><div class="metric"><div class="metric-label">GCash 3</div><div class="metric-value" id="metricGcash3">₱0</div></div><div class="metric"><div class="metric-label">Cash</div><div class="metric-value" id="metricCash">₱0</div></div></div></section>
+<section class="card"><h2>Records</h2><div class="table-wrap"><table><thead><tr><th>Date</th><th>Order ID</th><th>Customer</th><th>Type</th><th>Method</th><th>Amount</th><th>Reference</th><th>Status</th><th>Proof</th></tr></thead><tbody id="reportRows"><tr><td colspan="9">Loading...</td></tr></tbody></table></div></section></div></main>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="app.js"></script>
+</body></html>
